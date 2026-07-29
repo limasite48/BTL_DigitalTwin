@@ -26,7 +26,9 @@
 **/.gradle/
 **/*.class
 **/*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
 .gradle/
+
 
 # OS & IDE
 .DS_Store
