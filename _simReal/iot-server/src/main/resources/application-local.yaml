@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/iot?stringtype=unspecified
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  devtools:
+    restart:
+      enabled: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    com.huylq.iotprojectserver: DEBUG
+    org.hibernate.SQL: DEBUG
+
+iot:
+  # No iot.security.jwt.keys.* configured — JwtKeyManager generates an ephemeral RSA
+  # keypair for local dev. Fine for local; production must set real PEM material (or,
+  # better, wire a real KMS) — see the ops runbook.
+  mqtt:
+    broker-url: tcp://localhost:1883
+    client-id: iot-server-local
+  redis:
+    enabled: false

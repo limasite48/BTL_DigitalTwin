@@ -1,0 +1,38 @@
+package com.huylq.iotprojectserver.mqtt;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * Wires each module's listener to its topic filter. Phase 5/6 add their own
+ * {@code @Bean MqttTopicSubscription} methods here (or in their own package) as
+ * heartbeat/command-ack/presence handlers land.
+ */
+@Configuration
+public class MqttConfig {
+
+  @Bean
+  MqttTopicSubscription telemetryTopicSubscription(TelemetryMqttListener listener) {
+    return new MqttTopicSubscription(MqttTopics.TELEMETRY_FILTER, 1, listener);
+  }
+
+  @Bean
+  MqttTopicSubscription heartbeatTopicSubscription(HeartbeatMqttListener listener) {
+    return new MqttTopicSubscription(MqttTopics.HEARTBEAT_FILTER, 1, listener);
+  }
+
+  @Bean
+  MqttTopicSubscription statusTopicSubscription(PresenceMqttListener listener) {
+    return new MqttTopicSubscription(MqttTopics.STATUS_FILTER, 1, listener);
+  }
+
+  @Bean
+  MqttTopicSubscription commandAckTopicSubscription(CommandAckMqttListener listener) {
+    return new MqttTopicSubscription(MqttTopics.COMMAND_ACK_FILTER, 1, listener);
+  }
+
+  @Bean
+  MqttTopicSubscription handshakeTopicSubscription(HandshakeMqttListener listener) {
+    return new MqttTopicSubscription("iot/handshake/gateway", 1, listener);
+  }
+}

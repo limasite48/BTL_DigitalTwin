@@ -1,0 +1,47 @@
+# Unity Cache & Build (Exclude heavy generated folders)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Python Cache & Environments
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/.uv/
+
+# Java & Gradle Build
+**/build/
+**/.gradle/
+**/*.class
+**/*.jar
+.gradle/
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Antigravity Cache & Archive
+_archive/
+.agents/
+_asset/
+
+# Unity (Keep dw executable build, ignore raw source project)
+_unity/btl-digitalTwin/
+*_BurstDebugInformation_DoNotShip/
+
+# Runtime Logs
+**/logs/
+*.log

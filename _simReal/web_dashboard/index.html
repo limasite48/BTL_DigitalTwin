@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimReal Digital Twin - Control Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo-area">
+      <div class="pulse-dot"></div>
+      <div>
+        <h1>SIMREAL DIGITAL TWIN</h1>
+        <span class="sub-title">Unified Control Center & Edge Shadow Engine</span>
+      </div>
+    </div>
+    <div class="header-badges">
+      <div class="badge" id="gw-conn-badge">
+        <span class="status-indicator active"></span>
+        <span id="gw-conn-text">GATEWAY: ONLINE</span>
+      </div>
+      <div class="badge weather-badge" id="weather-rain-badge">
+        <span class="icon">☀️</span>
+        <span id="weather-rain-text">WEATHER: CLEAR</span>
+      </div>
+      <div class="badge clock-badge">
+        <span class="icon">🕒</span>
+        <span id="sim-time-text">2026-07-01 08:00:00</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="dashboard-container">
+
+    <!-- Weather & Atmosphere Section -->
+    <section class="card weather-card">
+      <div class="card-header">
+        <h2>🌦️ Outdoor Weather & Atmosphere Engine</h2>
+        <span class="chip">Real-time Physics</span>
+      </div>
+      <div class="weather-grid">
+        <div class="metric-box">
+          <span class="label">Outdoor Temp / Humid</span>
+          <span class="value" id="val-outdoor-temp-humid">35.0 °C / 75.0 %</span>
+        </div>
+        <div class="metric-box">
+          <span class="label">Cloud Cover / Rain Rate</span>
+          <span class="value highlight-amber" id="val-outdoor-cloud-rain">15.0 % / 0.0 mm/h</span>
+        </div>
+        <div class="metric-box">
+          <span class="label">Solar Illuminance</span>
+          <span class="value highlight-cyan" id="val-outdoor-lux">45,000 Lux</span>
+        </div>
+        <div class="metric-box">
+          <span class="label">Sun Elevation / Azimuth</span>
+          <span class="value" id="val-sun-pos">35.0° / 104.0°</span>
+        </div>
+      </div>
+
+      <div class="control-row">
+        <div class="mode-btn-group">
+          <button class="btn btn-mode" id="btn-mode-clear" onclick="setWeatherMode('clear')">☀️ Clear</button>
+          <button class="btn btn-mode" id="btn-mode-fog" onclick="setWeatherMode('fog')">🌫️ Fog</button>
+          <button class="btn btn-mode" id="btn-mode-rain" onclick="setWeatherMode('rain')">🌧️ Rain</button>
+        </div>
+        <div class="input-group">
+          <input type="number" id="speed-input" min="0.1" max="1000" step="0.5" placeholder="Speed (1.0)">
+          <button class="btn btn-secondary" id="btn-set-speed">Set Speed (<span id="speed-val">1.0x</span>)</button>
+        </div>
+        <div class="input-group">
+          <input type="text" id="time-input" placeholder="2026-07-01 12:00:00">
+          <button class="btn btn-secondary" id="btn-set-time">Set Time</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gateway Control Section -->
+    <section class="card gateway-card">
+      <div class="card-header">
+        <h2>🛡️ IoT Gateway Edge Shadow</h2>
+        <span class="chip chip-success" id="chip-paired">82 Devices Paired</span>
+      </div>
+      <div class="gateway-row">
+        <div class="stat-pill">Telemetry Received: <strong id="stat-rx">0</strong></div>
+        <div class="stat-pill">mTLS Security: <strong>ACTIVE (TLS 1.3)</strong></div>
+        <button class="btn btn-outline" id="btn-toggle-network">
+          🌐 Toggle Network Outage (State: ONLINE)
+        </button>
+      </div>
+    </section>
+
+    <!-- 13 Zones Telemetry & Actuators Matrix -->
+    <section class="card zones-card">
+      <div class="card-header">
+        <h2>🏢 13 Office Zones & Balcony Telemetry Matrix</h2>
+        <span class="chip">Live Telemetry & Control</span>
+      </div>
+      <div class="zones-grid" id="zones-container">
+        <!-- Dynamically rendered zone cards -->
+      </div>
+    </section>
+
+    <!-- Doors & Windows Control Panel -->
+    <section class="card doors-windows-card">
+      <div class="card-header">
+        <h2>🚪 Doors & 🪟 Windows Actuators</h2>
+        <span class="chip">Physical Access Control</span>
+      </div>
+      <div class="doors-windows-grid">
+        <div class="sub-panel">
+          <h3>Main Doors (MC38 Sensors)</h3>
+          <div class="doors-list" id="doors-container">
+            <!-- Dynamically rendered door controls -->
+          </div>
+        </div>
+        <div class="sub-panel">
+          <h3>Windows & Curtains</h3>
+          <div class="windows-list" id="windows-container">
+            <!-- Dynamically rendered window controls -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>BTL Digital Twin System &copy; 2026 HUST. Built for SimReal Real-time Simulation Engine.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

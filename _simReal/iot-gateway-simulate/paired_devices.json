@@ -1,0 +1,482 @@
+{
+  "0100000111": {
+    "zone": "pantry",
+    "device": "dht22",
+    "install_code": "INST_PANTRY_DHT22",
+    "key_hex": "8a771df74174b499ee8e6bc1040b48f4"
+  },
+  "0100000112": {
+    "zone": "pantry",
+    "device": "mq2",
+    "install_code": "INST_PANTRY_MQ2",
+    "key_hex": "30770c7dcd4526aa23c766fcdd0011e5"
+  },
+  "0100000113": {
+    "zone": "pantry",
+    "device": "lm393",
+    "install_code": "INST_PANTRY_LM393",
+    "key_hex": "41a62505e46c478864fcd15311733cce"
+  },
+  "0100000121": {
+    "zone": "pantry",
+    "device": "light",
+    "install_code": "INST_PANTRY_LIGHT",
+    "key_hex": "0f96f0ba72423d200961b6fbc5e3e381"
+  },
+  "0100000122": {
+    "zone": "pantry",
+    "device": "ahu",
+    "install_code": "INST_PANTRY_AHU",
+    "key_hex": "e00a18febb1c5239909074f1c66842ce"
+  },
+  "0100000211": {
+    "zone": "storage",
+    "device": "dht22",
+    "install_code": "INST_STORAGE_DHT22",
+    "key_hex": "50037ded8d32c2506a81c928297b8c4c"
+  },
+  "0100000212": {
+    "zone": "storage",
+    "device": "mq2",
+    "install_code": "INST_STORAGE_MQ2",
+    "key_hex": "519d3dad6c28e4a65ef61ca568bc5754"
+  },
+  "0100000213": {
+    "zone": "storage",
+    "device": "lm393",
+    "install_code": "INST_STORAGE_LM393",
+    "key_hex": "b963cd16dfa8d4d021db8749c283985c"
+  },
+  "0100000221": {
+    "zone": "storage",
+    "device": "light",
+    "install_code": "INST_STORAGE_LIGHT",
+    "key_hex": "53883d859afb5760c96ad4a179b365ba"
+  },
+  "0100000222": {
+    "zone": "storage",
+    "device": "ahu",
+    "install_code": "INST_STORAGE_AHU",
+    "key_hex": "425565833696289f02f7d6af69519106"
+  },
+  "0100000311": {
+    "zone": "prvt_meeting",
+    "device": "dht22",
+    "install_code": "INST_PRVT_MEETING_DHT22",
+    "key_hex": "81c7e0071c1dbb482b2f36b7d41b065b"
+  },
+  "0100000312": {
+    "zone": "prvt_meeting",
+    "device": "mq2",
+    "install_code": "INST_PRVT_MEETING_MQ2",
+    "key_hex": "2bc771f196854657ca92f01b6c9bed0e"
+  },
+  "0100000313": {
+    "zone": "prvt_meeting",
+    "device": "lm393",
+    "install_code": "INST_PRVT_MEETING_LM393",
+    "key_hex": "e28cdb46d806968b9c6ce8cf09ae84fd"
+  },
+  "0100000321": {
+    "zone": "prvt_meeting",
+    "device": "light",
+    "install_code": "INST_PRVT_MEETING_LIGHT",
+    "key_hex": "2bcb0cbfac6c32a873a1789653aaa0dd"
+  },
+  "0100000322": {
+    "zone": "prvt_meeting",
+    "device": "ahu",
+    "install_code": "INST_PRVT_MEETING_AHU",
+    "key_hex": "67b1d22a051f18287010072a5038ec78"
+  },
+  "0100000411": {
+    "zone": "office_1",
+    "device": "dht22",
+    "install_code": "INST_OFFICE_1_DHT22",
+    "key_hex": "1b2bf44c9ae1f51f1f924c5b71dd0846"
+  },
+  "0100000412": {
+    "zone": "office_1",
+    "device": "mq2",
+    "install_code": "INST_OFFICE_1_MQ2",
+    "key_hex": "80ea1bd2e59a6f5fe97d5ad402f309c4"
+  },
+  "0100000413": {
+    "zone": "office_1",
+    "device": "lm393",
+    "install_code": "INST_OFFICE_1_LM393",
+    "key_hex": "890ca30054976fabac1bb91f5e5a9782"
+  },
+  "0100000421": {
+    "zone": "office_1",
+    "device": "light",
+    "install_code": "INST_OFFICE_1_LIGHT",
+    "key_hex": "203893f1086f42fdbbfb50ea93f1e2a5"
+  },
+  "0100000422": {
+    "zone": "office_1",
+    "device": "ahu",
+    "install_code": "INST_OFFICE_1_AHU",
+    "key_hex": "9ed44b0a4db377742054b31bd8d62001"
+  },
+  "0100000511": {
+    "zone": "office_2",
+    "device": "dht22",
+    "install_code": "INST_OFFICE_2_DHT22",
+    "key_hex": "00263bd88f5891b0e96276d7be319932"
+  },
+  "0100000512": {
+    "zone": "office_2",
+    "device": "mq2",
+    "install_code": "INST_OFFICE_2_MQ2",
+    "key_hex": "0a81807e25f3d98b0c7c833e38ca8086"
+  },
+  "0100000513": {
+    "zone": "office_2",
+    "device": "lm393",
+    "install_code": "INST_OFFICE_2_LM393",
+    "key_hex": "14342003c0efd55f1879686bcfce406d"
+  },
+  "0100000521": {
+    "zone": "office_2",
+    "device": "light",
+    "install_code": "INST_OFFICE_2_LIGHT",
+    "key_hex": "7800eeef5cfc65a97e3406b8563c9e8f"
+  },
+  "0100000522": {
+    "zone": "office_2",
+    "device": "ahu",
+    "install_code": "INST_OFFICE_2_AHU",
+    "key_hex": "2db3fba502d8d5ed0770b6528b39bd23"
+  },
+  "0100000611": {
+    "zone": "lobby",
+    "device": "dht22",
+    "install_code": "INST_LOBBY_DHT22",
+    "key_hex": "3685a926a83ae0bab93ac52ba6a80733"
+  },
+  "0100000612": {
+    "zone": "lobby",
+    "device": "mq2",
+    "install_code": "INST_LOBBY_MQ2",
+    "key_hex": "b6cf96affd345ef0795651d8fb952c42"
+  },
+  "0100000613": {
+    "zone": "lobby",
+    "device": "lm393",
+    "install_code": "INST_LOBBY_LM393",
+    "key_hex": "24531c4a343422612b46ca824cc22f82"
+  },
+  "0100000621": {
+    "zone": "lobby",
+    "device": "light",
+    "install_code": "INST_LOBBY_LIGHT",
+    "key_hex": "b01d377801209b8f875beaf1075cf85d"
+  },
+  "0100000622": {
+    "zone": "lobby",
+    "device": "ahu",
+    "install_code": "INST_LOBBY_AHU",
+    "key_hex": "1acc580f7272700d40cb51b89c0b51a3"
+  },
+  "0100000711": {
+    "zone": "connect",
+    "device": "dht22",
+    "install_code": "INST_CONNECT_DHT22",
+    "key_hex": "d9d9723baa6f098861c2c20dd3a31754"
+  },
+  "0100000712": {
+    "zone": "connect",
+    "device": "mq2",
+    "install_code": "INST_CONNECT_MQ2",
+    "key_hex": "544cc16f91ce9740d16f82f731b23e6b"
+  },
+  "0100000713": {
+    "zone": "connect",
+    "device": "lm393",
+    "install_code": "INST_CONNECT_LM393",
+    "key_hex": "fd3c21a9a6620b51fe824cca9c4b51db"
+  },
+  "0100000721": {
+    "zone": "connect",
+    "device": "light",
+    "install_code": "INST_CONNECT_LIGHT",
+    "key_hex": "1048f8b600433f188c3ebcbbc2e9b467"
+  },
+  "0100000722": {
+    "zone": "connect",
+    "device": "ahu",
+    "install_code": "INST_CONNECT_AHU",
+    "key_hex": "9ceb8eebd323e139db077616b422bf9f"
+  },
+  "0100000811": {
+    "zone": "director",
+    "device": "dht22",
+    "install_code": "INST_DIRECTOR_DHT22",
+    "key_hex": "541e581808b428379ae5efd795587e19"
+  },
+  "0100000812": {
+    "zone": "director",
+    "device": "mq2",
+    "install_code": "INST_DIRECTOR_MQ2",
+    "key_hex": "813bc3c519742ec116cc6518a016d904"
+  },
+  "0100000813": {
+    "zone": "director",
+    "device": "lm393",
+    "install_code": "INST_DIRECTOR_LM393",
+    "key_hex": "5e32e8e5fe75249747071e734351be5b"
+  },
+  "0100000821": {
+    "zone": "director",
+    "device": "light",
+    "install_code": "INST_DIRECTOR_LIGHT",
+    "key_hex": "59d7b23d32d1cb004e9c835c8ee0ba4f"
+  },
+  "0100000822": {
+    "zone": "director",
+    "device": "ahu",
+    "install_code": "INST_DIRECTOR_AHU",
+    "key_hex": "13a85b8fd60aaa094f2d7c1db7e8f05b"
+  },
+  "0100000911": {
+    "zone": "finance_mng",
+    "device": "dht22",
+    "install_code": "INST_FINANCE_MNG_DHT22",
+    "key_hex": "1baa647a72df348022988cae9510434e"
+  },
+  "0100000912": {
+    "zone": "finance_mng",
+    "device": "mq2",
+    "install_code": "INST_FINANCE_MNG_MQ2",
+    "key_hex": "04cd6cd6a603c8bd01585c67a36e1209"
+  },
+  "0100000913": {
+    "zone": "finance_mng",
+    "device": "lm393",
+    "install_code": "INST_FINANCE_MNG_LM393",
+    "key_hex": "691b6bc5ea511e3b37e136279911918f"
+  },
+  "0100000921": {
+    "zone": "finance_mng",
+    "device": "light",
+    "install_code": "INST_FINANCE_MNG_LIGHT",
+    "key_hex": "94b347ed7457c97dc628ff5300e0e70e"
+  },
+  "0100000922": {
+    "zone": "finance_mng",
+    "device": "ahu",
+    "install_code": "INST_FINANCE_MNG_AHU",
+    "key_hex": "6b41474b0cb7f88390e27f86e4bc04a2"
+  },
+  "0100000A11": {
+    "zone": "meeting",
+    "device": "dht22",
+    "install_code": "INST_MEETING_DHT22",
+    "key_hex": "6c69b6a10d527717b5eb88deeb415bb2"
+  },
+  "0100000A12": {
+    "zone": "meeting",
+    "device": "mq2",
+    "install_code": "INST_MEETING_MQ2",
+    "key_hex": "1cecefff8c4c4bf97f3ccf36b128c56b"
+  },
+  "0100000A13": {
+    "zone": "meeting",
+    "device": "lm393",
+    "install_code": "INST_MEETING_LM393",
+    "key_hex": "c61c950f7ab695b071e4ab00f1f47bae"
+  },
+  "0100000A21": {
+    "zone": "meeting",
+    "device": "light",
+    "install_code": "INST_MEETING_LIGHT",
+    "key_hex": "65cc27a8eeb88f3fa0968a7088bc4241"
+  },
+  "0100000A22": {
+    "zone": "meeting",
+    "device": "ahu",
+    "install_code": "INST_MEETING_AHU",
+    "key_hex": "cf5dfc214d177265cf87d1ef8de65bda"
+  },
+  "0100000B11": {
+    "zone": "technical_mng",
+    "device": "dht22",
+    "install_code": "INST_TECHNICAL_MNG_DHT22",
+    "key_hex": "4966ab094e2dbfd7542a3954a41dc3b1"
+  },
+  "0100000B12": {
+    "zone": "technical_mng",
+    "device": "mq2",
+    "install_code": "INST_TECHNICAL_MNG_MQ2",
+    "key_hex": "9989fdbb0a7a46bb16017bbc4c60d222"
+  },
+  "0100000B13": {
+    "zone": "technical_mng",
+    "device": "lm393",
+    "install_code": "INST_TECHNICAL_MNG_LM393",
+    "key_hex": "3617d1f5f70ed81d9338b04c1c1b5112"
+  },
+  "0100000B21": {
+    "zone": "technical_mng",
+    "device": "light",
+    "install_code": "INST_TECHNICAL_MNG_LIGHT",
+    "key_hex": "b9d87366d19dd17498edfc6a8a889e7e"
+  },
+  "0100000B22": {
+    "zone": "technical_mng",
+    "device": "ahu",
+    "install_code": "INST_TECHNICAL_MNG_AHU",
+    "key_hex": "17b590d0d715f9ff70797ad6172f61fc"
+  },
+  "0100000C11": {
+    "zone": "vice_director",
+    "device": "dht22",
+    "install_code": "INST_VICE_DIRECTOR_DHT22",
+    "key_hex": "b769a21786829cb0d91692636c5dff41"
+  },
+  "0100000C12": {
+    "zone": "vice_director",
+    "device": "mq2",
+    "install_code": "INST_VICE_DIRECTOR_MQ2",
+    "key_hex": "f8ef7c0f10afb25c4c6ae329933b73bd"
+  },
+  "0100000C13": {
+    "zone": "vice_director",
+    "device": "lm393",
+    "install_code": "INST_VICE_DIRECTOR_LM393",
+    "key_hex": "f700717b04b999c3785ed247ecc596c3"
+  },
+  "0100000C21": {
+    "zone": "vice_director",
+    "device": "light",
+    "install_code": "INST_VICE_DIRECTOR_LIGHT",
+    "key_hex": "846f291f67aa8ef09185d25b1798fc88"
+  },
+  "0100000C22": {
+    "zone": "vice_director",
+    "device": "ahu",
+    "install_code": "INST_VICE_DIRECTOR_AHU",
+    "key_hex": "e009cb32f550c86283912fc5602e814a"
+  },
+  "010000D114": {
+    "zone": "door_01",
+    "device": "mc38",
+    "install_code": "INST_DOOR_01_MC38",
+    "key_hex": "300b8f6b0899859d9309f62e7591d90e"
+  },
+  "010000D214": {
+    "zone": "door_02",
+    "device": "mc38",
+    "install_code": "INST_DOOR_02_MC38",
+    "key_hex": "d49daf6dfd1e1cfa99dc86cf37809dc5"
+  },
+  "010000D314": {
+    "zone": "door_03",
+    "device": "mc38",
+    "install_code": "INST_DOOR_03_MC38",
+    "key_hex": "758107401c15ba5aadcdbfa50560780c"
+  },
+  "010000D414": {
+    "zone": "door_04",
+    "device": "mc38",
+    "install_code": "INST_DOOR_04_MC38",
+    "key_hex": "4364b4fbb7ab34c88fac7653dda1ea28"
+  },
+  "010000D514": {
+    "zone": "door_05",
+    "device": "mc38",
+    "install_code": "INST_DOOR_05_MC38",
+    "key_hex": "2b9d36c8d75e2f6ef6e26775fc003a50"
+  },
+  "010000E114": {
+    "zone": "wd_01",
+    "device": "mc38",
+    "install_code": "INST_WD_01_MC38",
+    "key_hex": "93c58fee9ec2c43deb6d9740075961d0"
+  },
+  "010000E123": {
+    "zone": "wd_01",
+    "device": "curtain",
+    "install_code": "INST_WD_01_CURTAIN",
+    "key_hex": "9667da7af0ca98e610be46c26253d404"
+  },
+  "010000E214": {
+    "zone": "wd_02",
+    "device": "mc38",
+    "install_code": "INST_WD_02_MC38",
+    "key_hex": "e30f65ec67b66d72e2fe3ec54904aaf0"
+  },
+  "010000E223": {
+    "zone": "wd_02",
+    "device": "curtain",
+    "install_code": "INST_WD_02_CURTAIN",
+    "key_hex": "031fa359ca8e67bdb7445adae88bb1ec"
+  },
+  "010000E314": {
+    "zone": "wd_03",
+    "device": "mc38",
+    "install_code": "INST_WD_03_MC38",
+    "key_hex": "3ad0df996a928d0bf17d07e34b8cad3b"
+  },
+  "010000E323": {
+    "zone": "wd_03",
+    "device": "curtain",
+    "install_code": "INST_WD_03_CURTAIN",
+    "key_hex": "202018d6c2a5dacd4ccfd1c6c596362e"
+  },
+  "010000E414": {
+    "zone": "wd_04",
+    "device": "mc38",
+    "install_code": "INST_WD_04_MC38",
+    "key_hex": "8068eade0848ec492c09fbecfbe9b4dd"
+  },
+  "010000E423": {
+    "zone": "wd_04",
+    "device": "curtain",
+    "install_code": "INST_WD_04_CURTAIN",
+    "key_hex": "79fd55b569bf54e65c17f103f6960651"
+  },
+  "010000E514": {
+    "zone": "wd_05",
+    "device": "mc38",
+    "install_code": "INST_WD_05_MC38",
+    "key_hex": "191b4bd153a9dcd8927f43adab226463"
+  },
+  "010000E523": {
+    "zone": "wd_05",
+    "device": "curtain",
+    "install_code": "INST_WD_05_CURTAIN",
+    "key_hex": "c9c7a0128ea60e11793baf8b22336f0a"
+  },
+  "010000E614": {
+    "zone": "wd_06",
+    "device": "mc38",
+    "install_code": "INST_WD_06_MC38",
+    "key_hex": "ff833019948438ec7882ec0a7d3666d1"
+  },
+  "010000E623": {
+    "zone": "wd_06",
+    "device": "curtain",
+    "install_code": "INST_WD_06_CURTAIN",
+    "key_hex": "2342f2570c43546645e9165709c9ad4b"
+  },
+  "0100000D11": {
+    "zone": "balcony",
+    "device": "dht22",
+    "install_code": "INST_BALCONY_DHT22",
+    "key_hex": "1faf72252aa9dce1e77608724e31c866"
+  },
+  "0100000D12": {
+    "zone": "balcony",
+    "device": "mq2",
+    "install_code": "INST_BALCONY_MQ2",
+    "key_hex": "f8d8128577eb1408b7613a44910dbac6"
+  },
+  "0100000D13": {
+    "zone": "balcony",
+    "device": "lm393",
+    "install_code": "INST_BALCONY_LM393",
+    "key_hex": "c331e3a89eb5ddbb96c5d553e239b8d0"
+  }
+}

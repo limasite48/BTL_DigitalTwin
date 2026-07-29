@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:17:///iot_test?stringtype=unspecified
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    username: test
+    password: test
+  jpa:
+    show-sql: false
+  flyway:
+    enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: WARN
+
+iot:
+  rate-limit:
+    enabled: false
+  security:
+    jwt:
+      # No keys.* configured — JwtKeyManager generates an ephemeral RSA keypair per test JVM.
+      access-token-ttl: 1m
+      refresh-token-ttl: 5m
+  mqtt:
+    # Closed local port so contexts that don't exercise MQTT fail the connect fast
+    # instead of hanging; MQTT-specific tests override this via @DynamicPropertySource
+    # against a Testcontainers broker.
+    broker-url: tcp://127.0.0.1:59999
+    client-id: iot-server-test-${random.uuid}
+    connect-timeout-seconds: 2
+  redis:
+    enabled: false

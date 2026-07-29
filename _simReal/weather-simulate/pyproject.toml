@@ -1,0 +1,13 @@
+[project]
+name = "weather-simulate"
+version = "0.1.0"
+description = "Ground Truth Engine mô phỏng Mặt trời và Thời tiết ngoài trời cho dự án Digital Twin"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "paho-mqtt>=2.1.0",
+    "pycryptodome>=3.20.0",
+]
+
+[project.scripts]
+weather-simulate = "main:main"

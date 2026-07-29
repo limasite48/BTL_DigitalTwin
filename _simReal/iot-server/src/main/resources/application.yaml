@@ -1,0 +1,110 @@
+spring:
+  application:
+    name: iot-project-server
+  profiles:
+    default: local
+  jackson:
+    default-property-inclusion: NON_NULL
+    time-zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+logging:
+  pattern:
+    # %X{correlationId} is bound per-request by CorrelationIdFilter; "system" for
+    # non-request threads (startup, scheduled jobs).
+    level: "%5p [%X{correlationId:-system}]"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+springdoc:
+  api-docs:
+    path: /api/v1/api-docs
+  swagger-ui:
+    path: /api/v1/swagger-ui.html
+  show-actuator: true
+
+iot:
+  rate-limit:
+    enabled: true
+    user-per-minute: 100
+    device-per-minute: 300
+    auth-per-minute: 20
+    telemetry-per-minute: 600
+  redis:
+    enabled: false
+  security:
+    jwt:
+      issuer: iot-platform
+      access-token-ttl: 1h
+      refresh-token-ttl: 30d
+      device-token-ttl: 1h
+  device:
+    credential-rotation-grace: 24h   # previous secret stays valid this long after :rotate
+  idempotency:
+    ttl-hours: 24
+  pagination:
+    default-page-size: 50
+    max-page-size: 200
+  partitioning:
+    tables:
+      - telemetry
+      - audit_logs
+    retention-months: 0   # 0 = retention drop disabled (Open Question #1)
+    dry-run: true         # log dropped partitions instead of actually dropping
+  mqtt:
+    connect-timeout-seconds: 10
+    keep-alive-interval-seconds: 60
+    automatic-reconnect: true
+    max-reconnect-delay-ms: 30000
+  telemetry:
+    max-clock-skew-future: 5m   # device ts ahead of server time beyond this is flagged as implausible
+    max-clock-skew-past: 1h     # device ts behind server time beyond this is flagged as stale-replay
+    history-max-window: 7d      # GET /v1/telemetry rejects a from/to span wider than this
+    safety-gap:
+      sensor-types:
+        - smoke
+      max-age: 10m   # a safety sensor silent longer than this raises a TELEMETRY_GAP alert
+  health:
+    stale-after: 3m   # staleness sweep: mark OFFLINE if last_seen exceeds this (defense-in-depth alongside LWT)
+  command:
+    ack-timeout: 30s          # no ack within this window -> TIMEOUT (device-team spec: N unconfirmed, conservative default)
+    safety-device-types:      # routine/safety actuator split (no DB column for this)
+      - exhst_fan
+    safety-interlock:
+      enabled: true           # false -> NoOpSafetyInterlockCheck (isolated tests only)
+      alert-types-by-device-type:
+        exhst_fan:
+          - SMOKE
+  rules:
+    queue-capacity: 1000   # bounded in-process rule-evaluation queue (System Design §5.6)
+  audit:
+    history-max-window: 90d   # GET /v1/audit-logs rejects a from/to span wider than this
+  detection:
+    auth-failure-burst-threshold: 5     # failed logins for one username within a minute
+    rate-limit-spike-threshold: 10      # 429s for one identity within a minute
+    forbidden-spike-threshold: 10       # 403s from one IP within a minute
+    command-timeout-burst-threshold: 3  # command timeouts for one device within a minute
