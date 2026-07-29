@@ -110,12 +110,15 @@ $backendErr = "$logDir\backend_error.log"
 $backendProc = Start-Process cmd -ArgumentList "/c cd /d `"$simDir\iot-server`" && .\gradlew.bat bootRun" -NoNewWindow -RedirectStandardOutput $backendLog -RedirectStandardError $backendErr -PassThru
 
 # Poll Backend Health Check
-Write-Host "Waiting for Spring Boot Backend health check on http://localhost:8080..." -ForegroundColor Gray
+Write-Host "Waiting for Spring Boot Backend health check on http://localhost:8080 (First run may take up to 2-3 minutes to download JDK/dependencies)..." -ForegroundColor Gray
 $backendReady = $false
-for ($i = 1; $i -le 40; $i++) {
+for ($i = 1; $i -le 180; $i++) {
     Start-Sleep -Seconds 1
     if ($backendProc.HasExited) {
         break
+    }
+    if ($i % 15 -eq 0) {
+        Write-Host "Still waiting for Backend... ($i/180s) - Gradle is compiling/downloading dependencies in background..." -ForegroundColor Gray
     }
     try {
         $res = Invoke-WebRequest -Uri "http://localhost:8080/actuator/health" -UseBasicParsing -TimeoutSec 1 -ErrorAction SilentlyContinue
@@ -130,6 +133,7 @@ for ($i = 1; $i -le 40; $i++) {
         }
     }
 }
+
 
 if (-not $backendReady) {
     Write-Host "`n=======================================================================" -ForegroundColor Red
